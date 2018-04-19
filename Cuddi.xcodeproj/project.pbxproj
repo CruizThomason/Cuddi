@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38930E76682842A996AD12C7 /* Pods_Cuddi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FEE91F8065C9BF1030123C1 /* Pods_Cuddi.framework */; };
 		E1B52066208950CB0045F739 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B52065208950CB0045F739 /* AppDelegate.swift */; };
 		E1B52068208950CB0045F739 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B52067208950CB0045F739 /* ViewController.swift */; };
 		E1B5206D208950CC0045F739 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1B5206C208950CC0045F739 /* Assets.xcassets */; };
@@ -17,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FEE91F8065C9BF1030123C1 /* Pods_Cuddi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cuddi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32B5FD27FA741AE4722BF942 /* Pods-Cuddi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cuddi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cuddi/Pods-Cuddi.release.xcconfig"; sourceTree = "<group>"; };
+		BDA5507877FA770C1A7B58A0 /* Pods-Cuddi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cuddi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cuddi/Pods-Cuddi.debug.xcconfig"; sourceTree = "<group>"; };
 		E1B52062208950CA0045F739 /* Cuddi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cuddi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1B52065208950CB0045F739 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1B52067208950CB0045F739 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38930E76682842A996AD12C7 /* Pods_Cuddi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0407C1453DCB58FD8CB9388E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BDA5507877FA770C1A7B58A0 /* Pods-Cuddi.debug.xcconfig */,
+				32B5FD27FA741AE4722BF942 /* Pods-Cuddi.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D32FF2517B20730A0ECF67C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0FEE91F8065C9BF1030123C1 /* Pods_Cuddi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E1B52059208950CA0045F739 = {
 			isa = PBXGroup;
 			children = (
 				E1B52064208950CA0045F739 /* Cuddi */,
 				E1B52063208950CA0045F739 /* Products */,
+				0407C1453DCB58FD8CB9388E /* Pods */,
+				D32FF2517B20730A0ECF67C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1B52074208950CC0045F739 /* Build configuration list for PBXNativeTarget "Cuddi" */;
 			buildPhases = (
+				55135A03AA024768CD1082E4 /* [CP] Check Pods Manifest.lock */,
 				E1B5205E208950CA0045F739 /* Sources */,
 				E1B5205F208950CA0045F739 /* Frameworks */,
 				E1B52060208950CA0045F739 /* Resources */,
+				D2E3CE6767FB751B10A86ECB /* [CP] Embed Pods Frameworks */,
+				1251A2AA73B5E908F63C0AE1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,6 +162,69 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1251A2AA73B5E908F63C0AE1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Cuddi/Pods-Cuddi-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cuddi/Pods-Cuddi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55135A03AA024768CD1082E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cuddi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2E3CE6767FB751B10A86ECB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Cuddi/Pods-Cuddi-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cuddi/Pods-Cuddi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E1B5205E208950CA0045F739 /* Sources */ = {
@@ -278,15 +368,13 @@
 		};
 		E1B52075208950CC0045F739 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDA5507877FA770C1A7B58A0 /* Pods-Cuddi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77T5A89VWP;
 				INFOPLIST_FILE = Cuddi/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Cuddi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -296,15 +384,13 @@
 		};
 		E1B52076208950CC0045F739 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32B5FD27FA741AE4722BF942 /* Pods-Cuddi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 77T5A89VWP;
 				INFOPLIST_FILE = Cuddi/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Cuddi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
